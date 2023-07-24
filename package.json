@@ -57,6 +57,7 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.33.0",
     "less-loader": "11.0.0",
+    "prettier": "^3.0.0",
     "react-app-rewired": "^2.2.1"
   }
 }
