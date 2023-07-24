@@ -27,11 +27,11 @@ process.env.PORT = 3031
 module.exports = {
   webpack: override(
     addWebpackAlias({
-      // 路径别名，还需要配置tsconfig.json、tsconfig-base.json，在后面，可配置多个路径别名
-        '@': path.resolve(__dirname, 'src/')
+      // 路径别名，还需要配置tsconfig.json、tsconfig-base.json，在后面，可配置多个路径别名
+      '@': path.resolve(__dirname, 'src/')
     }),
     // antd按需加载
-    fixBabelImports('import', { 
+    fixBabelImports('import', {
       libraryName: 'antd',
       libraryDirectory: 'es',
       style: true // 支持less
@@ -44,5 +44,5 @@ module.exports = {
       }
     })
   ),
-  devServer: overrideDevServer(devServerConfig()) 
+  devServer: overrideDevServer(devServerConfig())
 }

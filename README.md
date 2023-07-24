@@ -45,8 +45,8 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-
 # 初始化
+
 ```bash
 # https://juejin.cn/post/7027019191282565128
 yarn create react-app config-center-web --template typescript
@@ -57,4 +57,4 @@ yarn add -D customize-cra react-app-rewired
 yarn add -D less-loader@11.0.0
 yarn add -D eslint@8.0.1 babel-plugin-import eslint-config-standard eslint-loader eslint-plugin-babel eslint-plugin-node eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react
 yarn add -D prettier
-``` 
+```
