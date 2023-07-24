@@ -55,6 +55,6 @@ yarn add react-router-dom @types/react-router-dom
 yarn add antd axios less
 yarn add -D customize-cra react-app-rewired
 yarn add -D less-loader@11.0.0
-yarn add -D eslint@7.11.0 babel-plugin-import eslint-config-standard eslint-loader eslint-plugin-babel eslint-plugin-node eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react
+yarn add -D eslint@8.0.1 babel-plugin-import eslint-config-standard eslint-loader eslint-plugin-babel eslint-plugin-node eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react
 yarn add -D prettier
 ``` 
