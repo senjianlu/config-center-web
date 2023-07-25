@@ -58,3 +58,11 @@ yarn add -D less-loader@11.0.0
 yarn add -D eslint@8.0.1 babel-plugin-import eslint-config-standard eslint-loader eslint-plugin-babel eslint-plugin-node eslint-plugin-prettier eslint-plugin-promise eslint-plugin-react
 yarn add -D prettier
 ```
+
+
+# 问题
+### 1. Missing space before function parentheses
+[https://blog.csdn.net/ryan55/article/details/104961173](https://blog.csdn.net/ryan55/article/details/104961173)
+
+### 2. 依赖问题
+[https://github.com/search?q=%22eslint-plugin-prettier%22%3A+%224&type=code](https://github.com/search?q=%22eslint-plugin-prettier%22%3A+%224&type=code)
