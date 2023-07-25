@@ -21,6 +21,8 @@ const devServerConfig = () => config => {
   }
 }
 
+// 允许远程访问
+process.env.HOST = '0.0.0.0'
 // 修改端口号
 process.env.PORT = 3031
 
