@@ -10,8 +10,12 @@ const {
 // 配置代理
 const proxy = {
   '/api': {
-    target: 'http://xxx:3000',
-    changeOrigin: true
+    target: 'http://dev.stapi.cn:8000',
+    changeOrigin: true,
+    pathRewrite: {
+      // '^/api': ''
+      "^/api": "/"
+    }
   }
 }
 const devServerConfig = () => config => {
