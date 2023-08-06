@@ -10,7 +10,7 @@ const {
 // 配置代理
 const proxy = {
   '/api': {
-    target: 'http://dev.stapi.cn:8000',
+    target: 'http://127.0.0.1:8000',
     changeOrigin: true,
     pathRewrite: {
       // '^/api': ''

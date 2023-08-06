@@ -1,7 +1,7 @@
-import axios from 'axios';
+import instance from '@/axios';
 
 export async function authLogin(data: any) {
-  return axios.post('/api/auth/login', data, {
+  return instance.post('/api/auth/login', data, {
     headers: {
       'Content-Type': 'multipart/form-data',
     },
@@ -9,13 +9,13 @@ export async function authLogin(data: any) {
 }
 
 export async function authMe(params: any) {
-  return axios.get('/api/auth/me', params);
+  return instance.get('/api/auth/me', params);
 }
 
 export async function authToken(params: any) {
-  return axios.get('/api/auth/token', params);
+  return instance.get('/api/auth/token', params);
 }
 
 export async function authLogout(data: any) {
-  return axios.post('/api/auth/logout', data);
+  return instance.post('/api/auth/logout', data);
 }

@@ -1,7 +1,8 @@
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
-import AuthProvider from './components/AuthProvider';
 import RequireAuth from './components/RequireAuth';
+import AuthProvider from './components/AuthProvider';
+import Home from './pages/Home';
 import Login from './pages/Login';
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
     <AuthProvider>
       <Routes>
         {/* 首页 */}
-        <Route path="/" element={<div>首页</div>} />
+        <Route path="/" element={<RequireAuth><Home /></RequireAuth>} />
         {/* 登录页 */}
         <Route path="/login" element={<Login />} />
         {/* 其他页面 */}

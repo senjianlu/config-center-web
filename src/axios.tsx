@@ -1,17 +1,44 @@
-import axios from "axios";
+import axios from 'axios';
 
-axios.defaults.timeout = 100000;
-// axios.defaults.baseURL = "http://localhost:8080";
+// 创建 axios 实例
+const instance = axios.create({
+  // baseURL: "http://localhost:3000",
+  timeout: 1000 * 1,
+});
 
-/**
- * http request 拦截器
- */
-axios.interceptors.request.use(
+// 请求拦截器，为请求头添加 token
+instance.interceptors.request.use(
   (config) => {
-    config.data = JSON.stringify(config.data);
+    const token = localStorage.getItem('token');
+    if (token) {
+      config.headers.Authorization = 'Bearer ' + token;
+    }
     return config;
-  },
-  (error) => {
-    return Promise.reject(error);
   }
+  // (error) => {
+  //   return Promise.reject(error);
+  // }
 );
+
+// 响应拦截器，处理 token 过期
+instance.interceptors.response.use(
+  (response) => {
+    return response;
+  }
+  // (error) => {
+  //   if (error.response) {
+  //     switch (error.response.status) {
+  //       case 401:
+  //         // 返回 401 清除 token 信息并跳转到登录页面
+  //         localStorage.removeItem("token");
+  //         router.replace({
+  //           path: "/login",
+  //           query: { redirect: router.currentRoute.fullPath },
+  //         });
+  //     }
+  //   }
+  //   return Promise.reject(error.response.data); // 返回接口返回的错误信息
+  // }
+);
+
+export default instance;
